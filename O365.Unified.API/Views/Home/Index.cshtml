@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    
+    @if (!string.IsNullOrEmpty(ViewBag.CurrentUserDisplayName))
+    {
+        <h3>Current user:</h3>
+
+        <h4>@ViewBag.CurrentUserDisplayName</h4>
+    }
+    else
+    {
+        @ViewBag.Message
+    }
+</div>

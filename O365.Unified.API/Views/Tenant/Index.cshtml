@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+
+    @if (ViewBag.TenantName != null)
+    {
+        <h3>Tenant details:</h3>
+
+        <h4>Tenant Name: @ViewBag.TenantName</h4>
+        <h4>Verified Domains: @ViewBag.VerifiedDomain</h4>
+    }
+    else
+    {
+        @ViewBag.Message
+    }
+</div>
