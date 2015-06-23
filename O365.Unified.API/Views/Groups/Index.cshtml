@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Office 365 Groups";
+}
+
+<div class="jumbotron">
+
+    @if (ViewBag.Groups != null)
+    {
+        <h3>Office 365 Groups</h3>
+
+        <ul>
+            @foreach (var group in ViewBag.Groups)
+            {
+                <li>@group</li>
+            }
+        </ul>
+    }
+    else
+    {
+        @ViewBag.Message
+    }
+</div>
